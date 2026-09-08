@@ -1,9 +1,9 @@
 #if UNITY_EDITOR
 using System.Collections.Generic;
 using AstraNope.Gameplay.Player;
-using AstraNope.Data.Buildings;
-using AstraNope.WorldObjects.Entities;
-using AstraNope.Services;
+using AstraNope.Data.Structures;
+using AstraNope.Data.Entities;
+using AstraNope.Managers;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -160,7 +160,7 @@ namespace AstraNope.Editor
                 {
                     Entity entity = root.AddComponent<Entity>();
                     entity.Configure("habitat_foundation", "Habitat Foundation", EntityKind.Structure);
-                    root.AddComponent<AstraNope.WorldObjects.Entities.Structure>();
+                    root.AddComponent<AstraNope.Data.Structures.Structure>();
                 }
                 return PrefabUtility.SaveAsPrefabAsset(root, path);
             }

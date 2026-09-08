@@ -62,7 +62,7 @@ namespace AstraNope.Editor
             var craft = UnityEngine.Object.FindFirstObjectByType<CraftPanel>(FindObjectsInactive.Include);
             var logs = UnityEngine.Object.FindFirstObjectByType<LogPanel>(FindObjectsInactive.Include);
             var blueprints = UnityEngine.Object.FindFirstObjectByType<BlueprintPanel>(FindObjectsInactive.Include);
-            var uiManager = UnityEngine.Object.FindFirstObjectByType<AstraNope.UI.Panels.UIManager>(FindObjectsInactive.Include);
+            var uiManager = UnityEngine.Object.FindFirstObjectByType<AstraNope.Managers.UIManager>(FindObjectsInactive.Include);
             if (uiManager) ApplyToRoot(uiManager.gameObject);
             ApplyPanel(hud);
             ApplyPanel(inventory);

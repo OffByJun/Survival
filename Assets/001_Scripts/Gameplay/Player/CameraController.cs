@@ -2,7 +2,6 @@ using System;
 using AstraNope.Gameplay.Input;
 using AstraNope.Data.Messages;
 using AstraNope.Data.Messages.Player;
-using AstraNope.Contracts.WorldObjects;
 using AstraNope.Types.States;
 using MessagePipe;
 using UnityEngine;

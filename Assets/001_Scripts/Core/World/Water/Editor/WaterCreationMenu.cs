@@ -82,7 +82,7 @@ namespace AstraNope.Core.World.Water.Editor
             buoyant.transform.SetParent(root.transform);
             buoyant.transform.position = new Vector3(0f, 3f, 0f);
             buoyant.AddComponent<Rigidbody>().mass = 500f;
-            buoyant.AddComponent<AstraNope.WorldObjects.Vehicles.BuoyancyController>();
+            buoyant.AddComponent<AstraNope.Data.Vehicles.BuoyancyController>();
             buoyant.AddComponent<WaterDebugProbe>();
             Undo.RegisterCreatedObjectUndo(buoyant, "Create Buoyant Test Cube");
 

@@ -5,17 +5,16 @@ using AstraNope.Core.World.Water;
 using AstraNope.Core.World.Water.Interfaces;
 using AstraNope.Data.Messages;
 using AstraNope.Data.Messages.Player;
-using AstraNope.WorldObjects.Vehicles;
+using AstraNope.Data.Vehicles;
 using AstraNope.Gameplay.Player;
-using AstraNope.WorldObjects.Items;
-using AstraNope.WorldObjects.Structures;
+using AstraNope.Data.Items;
+using AstraNope.Data.Structures;
 using AstraNope.Types.States;
-using AstraNope.WorldObjects.Vehicles.Components;
+using AstraNope.Data.Vehicles.Components;
 using MessagePipe;
 using UnityEngine;
 using VContainer;
 
-using AstraNope.Contracts.WorldObjects;
 using AstraNope.Contracts;
 namespace AstraNope.Gameplay.Player
 {

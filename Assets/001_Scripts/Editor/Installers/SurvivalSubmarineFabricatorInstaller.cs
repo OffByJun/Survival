@@ -1,12 +1,12 @@
 ﻿#if UNITY_EDITOR
-using AstraNope.Services;
-using AstraNope.WorldObjects.Entities;
+using AstraNope.Managers;
+using AstraNope.Data.Entities;
 using AstraNope.Gameplay.Player;
-using AstraNope.WorldObjects.Items;
-using AstraNope.WorldObjects.Structures;
-using AstraNope.WorldObjects.Vehicles;
+using AstraNope.Data.Items;
+using AstraNope.Data.Structures;
+using AstraNope.Data.Vehicles;
 using AstraNope.UI.Panels;
-using AstraNope.WorldObjects.Vehicles.Components;
+using AstraNope.Data.Vehicles.Components;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -126,8 +126,8 @@ namespace AstraNope.Editor
             collider.size = new Vector3(4.3f, 2.5f, 3.2f);
 
             if (!station.GetComponent<Entity>()) Undo.AddComponent<Entity>(station);
-            if (!station.GetComponent<AstraNope.WorldObjects.Entities.Structure>())
-                Undo.AddComponent<AstraNope.WorldObjects.Entities.Structure>(station);
+            if (!station.GetComponent<AstraNope.Data.Structures.Structure>())
+                Undo.AddComponent<AstraNope.Data.Structures.Structure>(station);
             var interactable = station.GetComponent<SubmarineFabricator>();
             if (!interactable) interactable = Undo.AddComponent<SubmarineFabricator>(station);
 
@@ -160,8 +160,8 @@ namespace AstraNope.Editor
                 var entity = root.GetComponent<Entity>() ?? root.AddComponent<Entity>();
                 entity.Configure("prototype_small_submarine", "1인용 소형 잠수함", EntityKind.Submarine);
                 if (!root.GetComponent<Health>()) root.AddComponent<Health>();
-                if (!root.GetComponent<AstraNope.WorldObjects.Entities.Vehicle>())
-                    root.AddComponent<AstraNope.WorldObjects.Entities.Vehicle>();
+                if (!root.GetComponent<AstraNope.Data.Vehicles.Vehicle>())
+                    root.AddComponent<AstraNope.Data.Vehicles.Vehicle>();
                 if (!root.GetComponent<Submarine>()) root.AddComponent<Submarine>();
                 if (!root.GetComponent<PrototypeSubmarine>()) root.AddComponent<PrototypeSubmarine>();
 

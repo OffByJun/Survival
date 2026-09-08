@@ -4,7 +4,7 @@ using AstraNope.Data.Items;
 using AstraNope.Data.Items.Attributes;
 using AstraNope.Data.Items.Modifiers;
 using AstraNope.Data.Databases;
-using AstraNope.WorldObjects.Items;
+using AstraNope.Data.Items;
 using AstraNope.Data.Items.Types;
 using UnityEditor;
 using UnityEngine;

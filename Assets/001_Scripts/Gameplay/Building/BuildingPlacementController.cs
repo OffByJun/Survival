@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using AstraNope.Data.Blueprints;
-using AstraNope.Data.Buildings;
+using AstraNope.Data.Structures;
 using AstraNope.Data.Messages;
 using AstraNope.Data.Databases;
-using AstraNope.Contracts.WorldObjects;
 using AstraNope.Contracts;
 using MessagePipe;
 using UnityEngine;

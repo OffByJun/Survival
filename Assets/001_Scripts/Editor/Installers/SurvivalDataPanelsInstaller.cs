@@ -1,7 +1,7 @@
 ﻿#if UNITY_EDITOR
 using System.Collections.Generic;
 using AstraNope.Data.Databases;
-using AstraNope.Services;
+using AstraNope.Managers;
 using AstraNope.UI.Panels;
 using AstraNope.UI.Components;
 using UnityEditor;

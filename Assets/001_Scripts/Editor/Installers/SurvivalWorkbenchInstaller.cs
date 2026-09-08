@@ -1,12 +1,12 @@
 ﻿#if UNITY_EDITOR
 using AstraNope.Gameplay.Player;
-using AstraNope.WorldObjects.Entities;
+using AstraNope.Data.Entities;
 using AstraNope.Data.Databases;
-using AstraNope.Services;
+using AstraNope.Managers;
 using AstraNope.Gameplay.Player;
-using AstraNope.WorldObjects.Items;
-using AstraNope.WorldObjects.Structures;
-using AstraNope.WorldObjects.Vehicles;
+using AstraNope.Data.Items;
+using AstraNope.Data.Structures;
+using AstraNope.Data.Vehicles;
 using AstraNope.UI.Panels;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -179,8 +179,8 @@ namespace AstraNope.Editor
             collider.center = new Vector3(0, .9f, 0);
             collider.size = new Vector3(2.7f, 1.8f, 1.2f);
             if (!station.GetComponent<Entity>()) Undo.AddComponent<Entity>(station);
-            if (!station.GetComponent<AstraNope.WorldObjects.Entities.Structure>())
-                Undo.AddComponent<AstraNope.WorldObjects.Entities.Structure>(station);
+            if (!station.GetComponent<AstraNope.Data.Structures.Structure>())
+                Undo.AddComponent<AstraNope.Data.Structures.Structure>(station);
             var fabricator = station.GetComponent<Fabricator>();
             if (!fabricator) fabricator = Undo.AddComponent<Fabricator>(station);
             fabricator.Configure("Workbench", "제작대 사용");

@@ -5,7 +5,7 @@ using AstraNope.Core.World.Entities.Interfaces;
 using AstraNope.Core.World.Entities.Resources;
 using AstraNope.Data.Items;
 using AstraNope.Contracts;
-using AstraNope.Services;
+using AstraNope.Managers;
 using NUnit.Framework;
 using Unity.Collections;
 using Unity.Entities;

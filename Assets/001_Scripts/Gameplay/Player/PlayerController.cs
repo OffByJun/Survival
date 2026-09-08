@@ -4,7 +4,7 @@ using AstraNope.Gameplay.Survival;
 using AstraNope.Data;
 using AstraNope.Data.Items;
 using AstraNope.Data.Messages;
-using AstraNope.WorldObjects.Entities;
+using AstraNope.Data.Entities;
 using AstraNope.Types.States;
 using MessagePipe;
 using UnityEngine;

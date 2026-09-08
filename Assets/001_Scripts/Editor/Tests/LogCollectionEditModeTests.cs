@@ -1,7 +1,7 @@
 #if UNITY_EDITOR
 using AstraNope.Data;
 using AstraNope.Data.Messages;
-using AstraNope.Services;
+using AstraNope.Managers;
 using MessagePipe;
 using NUnit.Framework;
 using System;

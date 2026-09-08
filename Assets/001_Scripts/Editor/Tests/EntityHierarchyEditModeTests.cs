@@ -1,11 +1,10 @@
 using System.Linq;
 using System.Reflection;
 using AstraNope.Gameplay.Player;
-using AstraNope.Contracts.WorldObjects;
-using AstraNope.WorldObjects.Entities;
-using AstraNope.WorldObjects.Items;
-using AstraNope.WorldObjects.Structures;
-using AstraNope.WorldObjects.Vehicles;
+using AstraNope.Data.Entities;
+using AstraNope.Data.Items;
+using AstraNope.Data.Structures;
+using AstraNope.Data.Vehicles;
 using NUnit.Framework;
 using UnityEditor.SceneManagement;
 using UnityEngine;

@@ -1,6 +1,6 @@
 using AstraNope.Data.Messages;
 using AstraNope.Contracts;
-using AstraNope.WorldObjects.Items;
+using AstraNope.Data.Items;
 using UnityEngine;
 
 using AstraNope.Localization;
