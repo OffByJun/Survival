@@ -1,0 +1,3 @@
+[submodule "Packages/com.emiteat.worldbuilder"]
+	path = Packages/com.emiteat.worldbuilder
+	url = https://github.com/OffByJun/WorldBuilder.git

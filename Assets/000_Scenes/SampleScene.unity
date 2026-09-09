@@ -5793,7 +5793,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 1610780992}
+    m_Font: {fileID: 2118933180}
     m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
@@ -7310,74 +7310,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155236109}
   m_CullTransparentMesh: 1
---- !u!1001 &156071845
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4704833490965663931, guid: ae381a2325e311f48aa74c9edebad2e2,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 53.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704833490965663931, guid: ae381a2325e311f48aa74c9edebad2e2,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704833490965663931, guid: ae381a2325e311f48aa74c9edebad2e2,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.049996
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704833490965663931, guid: ae381a2325e311f48aa74c9edebad2e2,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.00000004371139
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704833490965663931, guid: ae381a2325e311f48aa74c9edebad2e2,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704833490965663931, guid: ae381a2325e311f48aa74c9edebad2e2,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704833490965663931, guid: ae381a2325e311f48aa74c9edebad2e2,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704833490965663931, guid: ae381a2325e311f48aa74c9edebad2e2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704833490965663931, guid: ae381a2325e311f48aa74c9edebad2e2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 1.335
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704833490965663931, guid: ae381a2325e311f48aa74c9edebad2e2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5332611111309986305, guid: ae381a2325e311f48aa74c9edebad2e2,
-        type: 3}
-      propertyPath: m_Name
-      value: PrototypeSmallSubmarine
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ae381a2325e311f48aa74c9edebad2e2, type: 3}
 --- !u!1 &156569988
 GameObject:
   m_ObjectHideFlags: 0
@@ -8625,7 +8557,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 1610780992}
+    m_Font: {fileID: 2118933180}
     m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
@@ -9292,7 +9224,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 1610780992}
+    m_Font: {fileID: 2118933180}
     m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
@@ -9831,84 +9763,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208985177}
   m_CullTransparentMesh: 1
---- !u!1001 &209500931
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 767912114494170266, guid: c86a7b6b6d41b7d44b9c5a462544bff0,
-        type: 3}
-      propertyPath: kind
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 767912114494170266, guid: c86a7b6b6d41b7d44b9c5a462544bff0,
-        type: 3}
-      propertyPath: entityId
-      value: BuilderTool
-      objectReference: {fileID: 0}
-    - target: {fileID: 850874166296415555, guid: c86a7b6b6d41b7d44b9c5a462544bff0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 850874166296415555, guid: c86a7b6b6d41b7d44b9c5a462544bff0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 850874166296415555, guid: c86a7b6b6d41b7d44b9c5a462544bff0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 850874166296415555, guid: c86a7b6b6d41b7d44b9c5a462544bff0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 850874166296415555, guid: c86a7b6b6d41b7d44b9c5a462544bff0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 850874166296415555, guid: c86a7b6b6d41b7d44b9c5a462544bff0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 850874166296415555, guid: c86a7b6b6d41b7d44b9c5a462544bff0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 850874166296415555, guid: c86a7b6b6d41b7d44b9c5a462544bff0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 850874166296415555, guid: c86a7b6b6d41b7d44b9c5a462544bff0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 850874166296415555, guid: c86a7b6b6d41b7d44b9c5a462544bff0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6759891727103965164, guid: c86a7b6b6d41b7d44b9c5a462544bff0,
-        type: 3}
-      propertyPath: m_Name
-      value: BuildToolPickup
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c86a7b6b6d41b7d44b9c5a462544bff0, type: 3}
 --- !u!1 &211683357
 GameObject:
   m_ObjectHideFlags: 0
@@ -14293,7 +14147,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 1610780992}
+    m_Font: {fileID: 2118933180}
     m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
@@ -22140,7 +21994,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 1610780992}
+    m_Font: {fileID: 2118933180}
     m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
@@ -25029,7 +24883,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 1610780992}
+    m_Font: {fileID: 2118933180}
     m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
@@ -31492,52 +31346,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706178560}
   m_CullTransparentMesh: 1
---- !u!28 &706675750
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Malgun Gothic
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 4
-  m_Width: 0
-  m_Height: 0
-  m_CompleteImageSize: 0
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 0
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 0
-  _typelessdata: 
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &710831469
 GameObject:
   m_ObjectHideFlags: 0
@@ -42986,6 +42794,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956801775}
   m_CullTransparentMesh: 1
+--- !u!28 &964585485
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Malgun Gothic
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 4
+  m_Width: 0
+  m_Height: 0
+  m_CompleteImageSize: 0
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 0
+  _typelessdata: 
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1001 &964823921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47064,7 +46918,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 1610780992}
+    m_Font: {fileID: 2118933180}
     m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
@@ -53005,7 +52859,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 1610780992}
+    m_Font: {fileID: 2118933180}
     m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
@@ -54624,6 +54478,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238071540}
   m_CullTransparentMesh: 1
+--- !u!21 &1242012015
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Malgun Gothic
+  m_Shader: {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 964585485}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1245327370
 GameObject:
   m_ObjectHideFlags: 0
@@ -54690,7 +54577,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 1610780992}
+    m_Font: {fileID: 2118933180}
     m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
@@ -61212,39 +61099,6 @@ MonoBehaviour:
   itemId: 0
   count: 1
   displayName: Woowang
---- !u!21 &1408657748
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Malgun Gothic
-  m_Shader: {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 706675750}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1001 &1410323357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67218,7 +67072,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 1610780992}
+    m_Font: {fileID: 2118933180}
     m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
@@ -69276,39 +69130,6 @@ MonoBehaviour:
   - {fileID: 534217681}
   - {fileID: 1957587086}
   - {fileID: 1040895184}
---- !u!128 &1610780992
-Font:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Malgun Gothic
-  serializedVersion: 5
-  m_LineSpacing: 42.5625
-  m_DefaultMaterial: {fileID: 1408657748}
-  m_FontSize: 32
-  m_Texture: {fileID: 706675750}
-  m_AsciiStartOffset: 0
-  m_Tracking: 1
-  m_CharacterSpacing: 0
-  m_CharacterPadding: 1
-  m_ConvertCase: -2
-  m_CharacterRects: []
-  m_KerningValues: []
-  m_PixelScale: 0.1
-  m_FontData: 
-  m_Ascent: 34.828125
-  m_Descent: 0
-  m_DefaultStyle: 0
-  m_FontNames:
-  - Malgun Gothic
-  - Apple SD Gothic Neo
-  - Noto Sans CJK KR
-  - Arial
-  m_FallbackFonts: []
-  m_FontRenderingMode: 0
-  m_UseLegacyBoundsCalculation: 0
-  m_ShouldRoundAdvanceValue: 1
 --- !u!1 &1610797709
 GameObject:
   m_ObjectHideFlags: 0
@@ -72523,7 +72344,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 1610780992}
+    m_Font: {fileID: 2118933180}
     m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
@@ -79382,7 +79203,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 1610780992}
+    m_Font: {fileID: 2118933180}
     m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
@@ -92590,6 +92411,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116328289}
   m_CullTransparentMesh: 1
+--- !u!128 &2118933180
+Font:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Malgun Gothic
+  serializedVersion: 5
+  m_LineSpacing: 42.5625
+  m_DefaultMaterial: {fileID: 1242012015}
+  m_FontSize: 32
+  m_Texture: {fileID: 964585485}
+  m_AsciiStartOffset: 0
+  m_Tracking: 1
+  m_CharacterSpacing: 0
+  m_CharacterPadding: 1
+  m_ConvertCase: -2
+  m_CharacterRects: []
+  m_KerningValues: []
+  m_PixelScale: 0.1
+  m_FontData: 
+  m_Ascent: 34.828125
+  m_Descent: 0
+  m_DefaultStyle: 0
+  m_FontNames:
+  - Malgun Gothic
+  - Apple SD Gothic Neo
+  - Noto Sans CJK KR
+  - Arial
+  m_FallbackFonts: []
+  m_FontRenderingMode: 0
+  m_UseLegacyBoundsCalculation: 0
+  m_ShouldRoundAdvanceValue: 1
 --- !u!1 &2120820319
 GameObject:
   m_ObjectHideFlags: 0
@@ -93545,5 +93399,3 @@ SceneRoots:
   - {fileID: 2105000002}
   - {fileID: 96426173}
   - {fileID: 213956573}
-  - {fileID: 156071845}
-  - {fileID: 209500931}

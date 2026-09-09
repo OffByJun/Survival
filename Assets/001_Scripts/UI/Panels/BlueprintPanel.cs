@@ -79,7 +79,7 @@ namespace AstraNope.UI.Panels
             int unlocked = 0;
             int total = 0;
             var statuses = _progress.GetAllBlueprints();
-            var byId = new Dictionary<int, AstraNope.Data.BlueprintsUnlockStatus>();
+            var byId = new Dictionary<int, AstraNope.Data.BlueprintUnlockStatus>();
             for (int i = 0; i < statuses.Count; i++)
             {
                 byId[statuses[i].Id] = statuses[i];

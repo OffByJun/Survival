@@ -3,28 +3,30 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 using WorldBuilder.Entities.Creatures;
 
 namespace AstraNope.Core.World.Entities.Creatures.AI
 {
     [DisallowMultipleComponent]
-    [AddComponentMenu("Survival/Creatures/Ray Spawn Zones")]
-    public sealed class RaySpawnZonesAuthoring : MonoBehaviour
+    [AddComponentMenu("Survival/Creatures/Creature Spawn Zones")]
+    [MovedFrom(true, sourceClassName: "RaySpawnZonesAuthoring")]
+    public sealed class CreatureSpawnZonesAuthoring : MonoBehaviour
     {
-        [SerializeField] private RaySpeciesCatalog catalog;
+        [SerializeField] private CreatureSpeciesCatalog catalog;
 
-        private sealed class Baker : Baker<RaySpawnZonesAuthoring>
+        private sealed class Baker : Baker<CreatureSpawnZonesAuthoring>
         {
-            public override void Bake(RaySpawnZonesAuthoring authoring)
+            public override void Bake(CreatureSpawnZonesAuthoring authoring)
             {
                 if (authoring.catalog == null) return;
                 DependsOn(authoring.catalog);
                 for (int i = 0; i < authoring.catalog.Species.Count; i++)
                 {
-                    RaySpeciesDefinition species = authoring.catalog.Species[i];
+                    CreatureSpeciesDefinition species = authoring.catalog.Species[i];
                     if (species == null || species.Model == null) continue;
                     Entity zone = CreateAdditionalEntity(TransformUsageFlags.None, false,
-                        $"RaySpawnZone_{species.PrefabId}");
+                        $"CreatureSpawnZone_{species.PrefabId}");
                     AddComponent(zone, LocalTransform.FromPositionRotation(
                         species.SpawnCenter, quaternion.identity));
                     AddComponent(zone, new CreatureSpawnZone

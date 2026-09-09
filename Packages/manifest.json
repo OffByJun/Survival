@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.emiteat.worldbuilder": "0.17.1",
     "com.cysharp.messagepipe": "1.8.1",
     "com.cysharp.messagepipe.vcontainer": "1.8.1",
     "com.cysharp.unitask": "2.5.11",
@@ -53,7 +54,8 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0",
-    "com.unity.ai.assistant": "2.14.0-pre.1"
+    "com.unity.ai.assistant": "2.14.0-pre.1",
+    "com.unity.pipeline": "0.6.0-exp.1"
   },
   "scopedRegistries": [
     {

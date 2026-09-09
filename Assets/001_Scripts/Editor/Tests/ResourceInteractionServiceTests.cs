@@ -81,7 +81,7 @@ namespace AstraNope.Editor.Tests
 
         private static ResourceInteractionInfo Resource(string name, HarvestMethod methods, byte tier, float power)
         {
-            return new ResourceInteractionInfo(new ResourceNode
+            return new ResourceInteractionInfo(new WorldBuilder.Entities.Resources.ResourceNode
             {
                 DisplayName = new FixedString64Bytes(name),
                 AllowedMethods = methods,

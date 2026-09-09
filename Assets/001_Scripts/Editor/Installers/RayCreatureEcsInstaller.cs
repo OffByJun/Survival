@@ -26,7 +26,7 @@ namespace AstraNope.Editor
     {
         private const string ModelFolder = "Assets/003_Resources/Models";
         private const string CatalogFolder = "Assets/003_Resources/Data/Creatures";
-        private const string CatalogPath = CatalogFolder + "/RaySpeciesCatalog.asset";
+        private const string CatalogPath = CatalogFolder + "/CreatureSpeciesCatalog.asset";
         private const string PrefabFolder = "Assets/WorldBuilder/Creatures/Rays";
         private const string EntityScenePath = "Assets/000_Scenes/WorldEntities.unity";
         private const string SpawnRootName = "RayCreatureSpawnZones";
@@ -65,7 +65,7 @@ namespace AstraNope.Editor
             EnsureFolder(CatalogFolder);
             EnsureFolder(PrefabFolder);
 
-            RaySpeciesCatalog catalog = LoadOrCreateCatalog();
+            CreatureSpeciesCatalog catalog = LoadOrCreateCatalog();
             RefreshCatalogModels(catalog);
             AssetDatabase.SaveAssets();
             List<RayPrefabRecord> rayPrefabs = BuildPrefabs(catalog);
@@ -80,7 +80,7 @@ namespace AstraNope.Editor
 
                 EnsureCreatureRuntime(runtime.gameObject);
                 RegisterPrefabs(runtime, rayPrefabs);
-                EnsureRaySpawnZones(runtime.gameObject, catalog);
+                EnsureCreatureSpawnZones(runtime.gameObject, catalog);
                 EditorSceneManager.MarkSceneDirty(entityScene);
                 EditorSceneManager.SaveScene(entityScene);
             }
@@ -95,16 +95,16 @@ namespace AstraNope.Editor
             Debug.Log($"[Survival] Installed {rayPrefabs.Count} ray species into the WorldBuilder ECS creature pipeline.");
         }
 
-        private static RaySpeciesCatalog LoadOrCreateCatalog()
+        private static CreatureSpeciesCatalog LoadOrCreateCatalog()
         {
-            RaySpeciesCatalog catalog = AssetDatabase.LoadAssetAtPath<RaySpeciesCatalog>(CatalogPath);
+            CreatureSpeciesCatalog catalog = AssetDatabase.LoadAssetAtPath<CreatureSpeciesCatalog>(CatalogPath);
             if (catalog != null) return catalog;
-            catalog = ScriptableObject.CreateInstance<RaySpeciesCatalog>();
+            catalog = ScriptableObject.CreateInstance<CreatureSpeciesCatalog>();
             AssetDatabase.CreateAsset(catalog, CatalogPath);
             return catalog;
         }
 
-        private static void RefreshCatalogModels(RaySpeciesCatalog catalog)
+        private static void RefreshCatalogModels(CreatureSpeciesCatalog catalog)
         {
             string[] modelPaths = AssetDatabase.FindAssets("t:Model", new[] { ModelFolder })
                 .Select(AssetDatabase.GUIDToAssetPath)
@@ -125,7 +125,7 @@ namespace AstraNope.Editor
                 while (usedIds.Contains(nextId)) nextId++;
 
                 string modelName = Path.GetFileNameWithoutExtension(modelPath);
-                RaySpeciesDefinition definition = new RaySpeciesDefinition();
+                CreatureSpeciesDefinition definition = new CreatureSpeciesDefinition();
                 definition.Configure(Humanize(modelName), nextId, model,
                     DefaultSpawnCenter(catalog.MutableSpecies.Count), DefaultSpeed(modelName), DefaultScale(modelName));
                 catalog.MutableSpecies.Add(definition);
@@ -137,11 +137,11 @@ namespace AstraNope.Editor
             EditorUtility.SetDirty(catalog);
         }
 
-        private static List<RayPrefabRecord> BuildPrefabs(RaySpeciesCatalog catalog)
+        private static List<RayPrefabRecord> BuildPrefabs(CreatureSpeciesCatalog catalog)
         {
             List<RayPrefabRecord> result = new List<RayPrefabRecord>();
             HashSet<int> ids = new HashSet<int>();
-            foreach (RaySpeciesDefinition definition in catalog.Species)
+            foreach (CreatureSpeciesDefinition definition in catalog.Species)
             {
                 if (definition == null || definition.Model == null) continue;
                 if (!ids.Add(definition.PrefabId))
@@ -153,7 +153,7 @@ namespace AstraNope.Editor
             return result;
         }
 
-        private static GameObject BuildPrefab(RaySpeciesDefinition definition)
+        private static GameObject BuildPrefab(CreatureSpeciesDefinition definition)
         {
             string safeName = SanitizeFileName(definition.DisplayName.Replace(" ", string.Empty));
             string path = $"{PrefabFolder}/{definition.PrefabId}_{safeName}.prefab";
@@ -221,10 +221,10 @@ namespace AstraNope.Editor
                 runtimeObject.AddComponent<CreatureRuntimeAuthoring>();
         }
 
-        private static void EnsureRaySpawnZones(GameObject runtimeObject, RaySpeciesCatalog catalog)
+        private static void EnsureCreatureSpawnZones(GameObject runtimeObject, CreatureSpeciesCatalog catalog)
         {
-            RaySpawnZonesAuthoring authoring = runtimeObject.GetComponent<RaySpawnZonesAuthoring>() ??
-                                                runtimeObject.AddComponent<RaySpawnZonesAuthoring>();
+            CreatureSpawnZonesAuthoring authoring = runtimeObject.GetComponent<CreatureSpawnZonesAuthoring>() ??
+                                                runtimeObject.AddComponent<CreatureSpawnZonesAuthoring>();
             SetObjectReference(authoring, "catalog", catalog);
         }
 
@@ -292,7 +292,7 @@ namespace AstraNope.Editor
             GameObject root = new GameObject(SpawnRootName);
             foreach (RayPrefabRecord record in rays)
             {
-                RaySpeciesDefinition definition = record.Definition;
+                CreatureSpeciesDefinition definition = record.Definition;
                 GameObject zoneObject = new GameObject($"{definition.PrefabId}_{definition.DisplayName}");
                 zoneObject.transform.SetParent(root.transform, false);
                 zoneObject.transform.position = definition.SpawnCenter;
@@ -379,10 +379,10 @@ namespace AstraNope.Editor
 
         private readonly struct RayPrefabRecord
         {
-            public readonly RaySpeciesDefinition Definition;
+            public readonly CreatureSpeciesDefinition Definition;
             public readonly GameObject Prefab;
 
-            public RayPrefabRecord(RaySpeciesDefinition definition, GameObject prefab)
+            public RayPrefabRecord(CreatureSpeciesDefinition definition, GameObject prefab)
             {
                 Definition = definition;
                 Prefab = prefab;

@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace AstraNope.Data.Creatures
 {
     [Serializable]
-    public sealed class RaySpeciesDefinition
+    [MovedFrom(true, sourceClassName: "RaySpeciesDefinition")]
+    public sealed class CreatureSpeciesDefinition
     {
-        [SerializeField] private string displayName = "Ray";
+        [SerializeField] private string displayName = "Creature";
         [SerializeField] private int prefabId = 2100;
         [SerializeField] private GameObject model;
         [Min(0.01f), SerializeField] private float modelScale = 1f;
@@ -55,15 +57,16 @@ namespace AstraNope.Data.Creatures
 #endif
     }
 
-    [CreateAssetMenu(menuName = "Survival/Creatures/Ray Species Catalog", fileName = "RaySpeciesCatalog")]
-    public sealed class RaySpeciesCatalog : ScriptableObject
+    [MovedFrom(true, sourceClassName: "RaySpeciesCatalog")]
+    [CreateAssetMenu(menuName = "Survival/Creatures/Creature Species Catalog", fileName = "CreatureSpeciesCatalog")]
+    public sealed class CreatureSpeciesCatalog : ScriptableObject
     {
-        [SerializeField] private List<RaySpeciesDefinition> species = new List<RaySpeciesDefinition>();
+        [SerializeField] private List<CreatureSpeciesDefinition> species = new List<CreatureSpeciesDefinition>();
 
-        public IReadOnlyList<RaySpeciesDefinition> Species => species;
+        public IReadOnlyList<CreatureSpeciesDefinition> Species => species;
 
 #if UNITY_EDITOR
-        public List<RaySpeciesDefinition> MutableSpecies => species;
+        public List<CreatureSpeciesDefinition> MutableSpecies => species;
 #endif
     }
 }

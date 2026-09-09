@@ -58,38 +58,6 @@ namespace AstraNope.Core.World.Water.Editor
             Selection.activeGameObject = gameObject;
         }
 
-        [MenuItem("Tools/Survival/Water/Create Validation Setup")]
-        private static void CreateValidationSetup()
-        {
-            GameObject root = new GameObject("Water Validation Setup");
-            Undo.RegisterCreatedObjectUndo(root, "Create Water Validation Setup");
-            WaterQueryService service = new GameObject("Water Query Service").AddComponent<WaterQueryService>();
-            Undo.RegisterCreatedObjectUndo(service.gameObject, "Create Water Query Service");
-            service.transform.SetParent(root.transform);
-
-            CreateOcean(new MenuCommand(root));
-            GameObject ocean = Selection.activeGameObject;
-            ocean.transform.position = new Vector3(0f, 0f, 0f);
-            CreateLake(new MenuCommand(root));
-            GameObject lake = Selection.activeGameObject;
-            lake.transform.position = new Vector3(25f, 1f, 0f);
-            CreateSplineRiver(new MenuCommand(root));
-            GameObject river = Selection.activeGameObject;
-            river.transform.position = new Vector3(-25f, 1f, 0f);
-
-            GameObject buoyant = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            buoyant.name = "Buoyant Test Cube";
-            buoyant.transform.SetParent(root.transform);
-            buoyant.transform.position = new Vector3(0f, 3f, 0f);
-            buoyant.AddComponent<Rigidbody>().mass = 500f;
-            buoyant.AddComponent<AstraNope.Data.Vehicles.BuoyancyController>();
-            buoyant.AddComponent<WaterDebugProbe>();
-            Undo.RegisterCreatedObjectUndo(buoyant, "Create Buoyant Test Cube");
-
-            Selection.activeGameObject = root;
-            EditorSceneManager.MarkSceneDirty(root.scene);
-        }
-
         private static GameObject CreateRoot(string name, MenuCommand command)
         {
             GameObject gameObject = new GameObject(name);
