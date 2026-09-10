@@ -1,5 +1,6 @@
 using System;
 using AstraNope.UI.Base;
+using AstraNope.Core.World.Entities.Interfaces;
 using AstraNope.Data.Messages;
 using AstraNope.Data.Databases;
 using AstraNope.Contracts;
@@ -30,6 +31,15 @@ namespace AstraNope.UI.Panels
         [SerializeField] private RectTransform hydrationFill;
         [SerializeField] private Text hydrationValue;
 
+        [Header("Taming")]
+        [SerializeField] private GameObject tamingRoot;
+        [SerializeField] private CanvasGroup tamingGroup;
+        [SerializeField] private Text tamingNameLabel;
+        [SerializeField] private Text tamingValueLabel;
+        [SerializeField] private RectTransform tamingFill;
+        [Min(0f), SerializeField] private float tamingHideDelaySeconds = 2.5f;
+        [Min(0.01f), SerializeField] private float tamingFadeSpeed = 6f;
+
         [Header("Display")]
         [SerializeField, Range(0f, 1f)] private float warningThreshold = .25f;
         [SerializeField] private Color warningColor = new(1f, .42f, .72f, 1f);
@@ -45,7 +55,11 @@ namespace AstraNope.UI.Panels
         private IHotbarReader _hotbar;
         private IHotbarActions _hotbarActions;
         private IPublisher<InventorySwapMessage> _swapPublisher;
+        private IEntityManager _entityManager;
         private LeftNotificationFeed _notifications;
+
+        private float _tamingHideTimer;
+        private float _tamingTargetAlpha;
 
         private IDisposable _bag;
 
@@ -59,6 +73,20 @@ namespace AstraNope.UI.Panels
             _notifications = GetComponent<LeftNotificationFeed>();
             if (!_notifications) _notifications = gameObject.AddComponent<LeftNotificationFeed>();
             _notifications.EnsureView();
+            if (tamingRoot) tamingRoot.SetActive(true);
+            if (tamingGroup) tamingGroup.alpha = 0f;
+        }
+
+        private void Update()
+        {
+            if (!tamingGroup) return;
+            if (_tamingHideTimer > 0f)
+            {
+                _tamingHideTimer -= Time.unscaledDeltaTime;
+                if (_tamingHideTimer <= 0f) _tamingTargetAlpha = 0f;
+            }
+            tamingGroup.alpha = Mathf.MoveTowards(tamingGroup.alpha, _tamingTargetAlpha,
+                tamingFadeSpeed * Time.unscaledDeltaTime);
         }
 
         private void OnValidate()
@@ -86,7 +114,8 @@ namespace AstraNope.UI.Panels
             ISubscriber<NotificationMessage> notificationSubscriber,
             IHotbarReader hotbar,
             IHotbarActions hotbarActions,
-            IPublisher<InventorySwapMessage> swapPublisher)
+            IPublisher<InventorySwapMessage> swapPublisher,
+            IEntityManager entityManager)
         {
             _bag?.Dispose();
             _hotbar = hotbar;
@@ -94,6 +123,9 @@ namespace AstraNope.UI.Panels
             _swapPublisher = swapPublisher;
             for (int i = 0; i < _hotbarSlots.Count; i++)
                 _hotbarSlots[i].Init(_swapPublisher, i, InventorySlotArea.Hotbar);
+            if (_entityManager != null) _entityManager.FeedCompleted -= OnFeedCompleted;
+            _entityManager = entityManager;
+            if (_entityManager != null) _entityManager.FeedCompleted += OnFeedCompleted;
             var builder = DisposableBag.CreateBuilder();
             builder.Add(playerStatSubscriber.Subscribe(UIUpdate));
             builder.Add(inventorySubscriber.Subscribe(_ => RefreshHotbar()));
@@ -101,6 +133,26 @@ namespace AstraNope.UI.Panels
             builder.Add(notificationSubscriber.Subscribe(message => _notifications?.Enqueue(message)));
             _bag = builder.Build();
             RefreshHotbar();
+        }
+
+        private void OnFeedCompleted(CreatureFeedEvent evt)
+        {
+            if (!tamingGroup) return;
+            _tamingTargetAlpha = 1f;
+            _tamingHideTimer = tamingHideDelaySeconds;
+
+            float normalized = evt.MaximumAffinity > 0f ? Mathf.Clamp01(evt.Affinity / evt.MaximumAffinity) : 0f;
+            if (tamingFill)
+            {
+                tamingFill.anchorMax = new Vector2(normalized, 1f);
+                tamingFill.offsetMax = Vector2.zero;
+            }
+            if (tamingNameLabel) tamingNameLabel.text = evt.IsTamed ? "길들임 완료" : "길들이는 중";
+            if (tamingValueLabel)
+                tamingValueLabel.text = evt.IsTamed
+                    ? "100%"
+                    : $"{Mathf.RoundToInt(normalized * 100f)}% ({evt.AttemptCount})";
+            if (evt.IsTamed) _tamingHideTimer = Mathf.Max(_tamingHideTimer, tamingHideDelaySeconds * 1.5f);
         }
 
         private void BuildHotbar()
@@ -255,7 +307,11 @@ namespace AstraNope.UI.Panels
             valueLabel.color = normalized <= warningThreshold ? warningColor : normalColor;
         }
 
-        private void OnDestroy() => _bag?.Dispose();
+        private void OnDestroy()
+        {
+            _bag?.Dispose();
+            if (_entityManager != null) _entityManager.FeedCompleted -= OnFeedCompleted;
+        }
     }
 
     public static class SurvivalUITheme

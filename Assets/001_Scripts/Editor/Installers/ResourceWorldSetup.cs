@@ -1,7 +1,7 @@
 #if UNITY_EDITOR
 using System;
 using System.Reflection;
-using AstraNope.Gameplay.Player;
+using AstraNope.Mechanics.Player;
 using AstraNope.Core;
 using AstraNope.Data.Items;
 using UnityEditor;

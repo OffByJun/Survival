@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 814b1b0c8b2b4fc0afc7520f9f7fe021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AstraNope.Core.World.Entities.Creatures.AI.CreatureSpawnZonesAuthoring
-  catalog: {fileID: 11400000, guid: 2cf814f1a6ce3ed4b92cac78559f7a61, type: 2}
+  catalog: {fileID: 0}
 --- !u!1001 &819927427
 PrefabInstance:
   m_ObjectHideFlags: 0

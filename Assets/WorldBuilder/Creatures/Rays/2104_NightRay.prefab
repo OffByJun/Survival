@@ -71,7 +71,7 @@ MonoBehaviour:
   fallbackGrade: 0
   sizeClass: 1
   personality: 2
-  interactions: 2
+  interactions: 6
   randomSeed: 2104
   supportedPatterns: 0
   primaryColor: {r: 0.72, g: 0.74, b: 0.75, a: 1}
@@ -90,8 +90,8 @@ MonoBehaviour:
   guaranteedAfterAttempts: 4
   preferredFoodBonus: 0.2
   preferredFeedItemId: -1
-  maximumAffinity: 100
-  affinityPerFeed: 25
+  maximumAffinity: 90
+  affinityPerFeed: 18
   feedCooldownSeconds: 2
   fleeDistanceOverride: 8
   wildReaction: 0

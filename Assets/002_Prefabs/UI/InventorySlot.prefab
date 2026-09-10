@@ -289,7 +289,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18

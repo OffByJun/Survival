@@ -29,6 +29,10 @@ MonoBehaviour:
     maximumAlive: 6
     spawnPerTick: 2
     spawnInterval: 8
+    maximumAffinity: 60
+    affinityPerFeed: 20
+    guaranteedAfterAttempts: 3
+    feedCooldownSeconds: 2
   - displayName: Coral Ray
     prefabId: 2101
     model: {fileID: 919132149155446097, guid: c8573897f27683d47be6b43e930514a3, type: 3}
@@ -45,6 +49,10 @@ MonoBehaviour:
     maximumAlive: 6
     spawnPerTick: 2
     spawnInterval: 8
+    maximumAffinity: 75
+    affinityPerFeed: 20
+    guaranteedAfterAttempts: 3
+    feedCooldownSeconds: 2
   - displayName: Electric Manta
     prefabId: 2102
     model: {fileID: 919132149155446097, guid: fd1026ee1d311954caeda551cbd99bc1, type: 3}
@@ -61,6 +69,10 @@ MonoBehaviour:
     maximumAlive: 6
     spawnPerTick: 2
     spawnInterval: 8
+    maximumAffinity: 110
+    affinityPerFeed: 15
+    guaranteedAfterAttempts: 5
+    feedCooldownSeconds: 2
   - displayName: King Ray
     prefabId: 2103
     model: {fileID: 919132149155446097, guid: 974f924a2b5fc464b83e214e960d2a7f, type: 3}
@@ -77,6 +89,10 @@ MonoBehaviour:
     maximumAlive: 6
     spawnPerTick: 2
     spawnInterval: 8
+    maximumAffinity: 150
+    affinityPerFeed: 15
+    guaranteedAfterAttempts: 6
+    feedCooldownSeconds: 2
   - displayName: Night Ray
     prefabId: 2104
     model: {fileID: 919132149155446097, guid: 45040cc198f638d468bbb93d395c7bb3, type: 3}
@@ -93,3 +109,7 @@ MonoBehaviour:
     maximumAlive: 6
     spawnPerTick: 2
     spawnInterval: 8
+    maximumAffinity: 90
+    affinityPerFeed: 18
+    guaranteedAfterAttempts: 4
+    feedCooldownSeconds: 2

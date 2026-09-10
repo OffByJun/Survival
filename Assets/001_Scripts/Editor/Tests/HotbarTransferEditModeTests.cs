@@ -1,7 +1,7 @@
 #if UNITY_EDITOR
 using System.Collections.Generic;
 using System.Reflection;
-using AstraNope.Gameplay.Player;
+using AstraNope.Mechanics.Player;
 using AstraNope.Data.Items;
 using AstraNope.Data.Messages;
 using AstraNope.Data.Databases;

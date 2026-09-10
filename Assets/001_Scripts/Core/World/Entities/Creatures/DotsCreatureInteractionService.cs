@@ -13,10 +13,13 @@ namespace AstraNope.Core.World.Entities.Creatures
         private readonly IWorldCreatureGateway gateway;
         private readonly ICreatureToolSelector toolSelector;
         private readonly CreatureColorFoodCatalog colorFoods;
+        private readonly CreatureTameFoodCatalog tameFoods;
+        private readonly System.Random underTierRoll = new System.Random();
 
         private Entity focusedEntity = Entity.Null;
         private CreatureToolSelection selectedTool;
         private CreatureInteractAction action;
+        private CreatureGrade focusedGrade;
         private Vector3 focusOrigin;
 
         private Entity labelEntity = Entity.Null;
@@ -36,11 +39,12 @@ namespace AstraNope.Core.World.Entities.Creatures
         }
 
         public DotsCreatureInteractionService(IWorldCreatureGateway gateway, ICreatureToolSelector toolSelector,
-            CreatureColorFoodCatalog colorFoods)
+            CreatureColorFoodCatalog colorFoods, CreatureTameFoodCatalog tameFoods)
         {
             this.gateway = gateway;
             this.toolSelector = toolSelector;
             this.colorFoods = colorFoods;
+            this.tameFoods = tameFoods;
         }
 
         public bool TryFocus(Vector3 origin, Vector3 direction, float distance, out CreatureInteractionFocus focus)
@@ -55,6 +59,7 @@ namespace AstraNope.Core.World.Entities.Creatures
 
             focusedEntity = target;
             focusOrigin = origin;
+            focusedGrade = info.Grade;
             selectedTool = toolSelector?.Select() ?? new CreatureToolSelection(-1, 0);
             action = ResolveAction(info, selectedTool);
 
@@ -83,7 +88,12 @@ namespace AstraNope.Core.World.Entities.Creatures
                 case CreatureInteractAction.Capture:
                     return gateway.TryCapture(focusedEntity, selectedTool.ItemId, selectedTool.Tier);
                 case CreatureInteractAction.Tame:
+                {
+                    if (tameFoods == null || !tameFoods.TryGetTameFood(selectedTool.ItemId, out TameFoodDefinition tameFood))
+                        return false;
+                    if (!ShouldRegisterFeedAttempt(tameFood.tier, focusedGrade)) return true;
                     return gateway.TryFeed(focusedEntity, selectedTool.ItemId, focusOrigin);
+                }
                 case CreatureInteractAction.ApplyColor:
                     return colorFoods != null &&
                            colorFoods.TryGetColorFood(selectedTool.ItemId, out ColorFoodDefinition food) &&
@@ -114,17 +124,38 @@ namespace AstraNope.Core.World.Entities.Creatures
 
             bool isColorFood = colorFoods != null && colorFoods.TryGetColorFood(tool.ItemId, out _);
             bool isPatternFood = colorFoods != null && colorFoods.TryGetPatternFood(tool.ItemId, out _);
+            bool isTameFood = tameFoods != null && tameFoods.IsTameFood(tool.ItemId);
 
             if ((isColorFood || isPatternFood) && info.CanRecolor && info.IsTamed)
                 return isColorFood ? CreatureInteractAction.ApplyColor : CreatureInteractAction.ApplyPattern;
 
-            if (!info.IsTamed && info.CanFeed && !info.IsAlarmed &&
-                (isColorFood || isPatternFood) == false && tool.ItemId >= 0)
+            if (!info.IsTamed && info.CanFeed && !info.IsAlarmed && isTameFood)
                 return CreatureInteractAction.Tame;
 
             if (EvaluateCapture(info, tool) == CreatureCaptureFailure.None) return CreatureInteractAction.Capture;
-            if (!info.IsTamed && info.CanFeed && !info.IsAlarmed) return CreatureInteractAction.Tame;
             return CreatureInteractAction.Inspect;
+        }
+
+        /// <summary>
+        /// Food below the creature's grade still "works" but mostly does nothing — only a small
+        /// chance per bite actually registers as a taming attempt. Food at or above grade always registers.
+        /// </summary>
+        private bool ShouldRegisterFeedAttempt(CreatureGrade foodTier, CreatureGrade creatureGrade)
+        {
+            int tierGap = GradeIndex(creatureGrade) - GradeIndex(foodTier);
+            if (tierGap <= 0) return true;
+            double chance = tierGap == 1 ? 0.2 : 0.05;
+            return underTierRoll.NextDouble() < chance;
+        }
+
+        private static int GradeIndex(CreatureGrade grade)
+        {
+            switch (grade)
+            {
+                case CreatureGrade.Rare: return 1;
+                case CreatureGrade.Legendary: return 2;
+                default: return 0;
+            }
         }
 
         private static CreatureCaptureFailure EvaluateCapture(in CreatureInteractionInfo info,

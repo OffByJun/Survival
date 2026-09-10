@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904c663e6f162d447b04fb266416a3d6, type: 3}
+  m_Name: TameFoodCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.Data.Items.CreatureTameFoodCatalog
+  tameFoods:
+  - itemId: 20
+    tier: 0
+  - itemId: 21
+    tier: 10
+  - itemId: 22
+    tier: 20

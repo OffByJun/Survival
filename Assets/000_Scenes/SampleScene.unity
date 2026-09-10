@@ -171,7 +171,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -1513,7 +1513,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -2551,7 +2551,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -4990,7 +4990,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -5793,7 +5793,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 2118933180}
+    m_Font: {fileID: 1649721580}
     m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
@@ -8397,7 +8397,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -8557,7 +8557,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 2118933180}
+    m_Font: {fileID: 1649721580}
     m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
@@ -9224,7 +9224,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 2118933180}
+    m_Font: {fileID: 1649721580}
     m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
@@ -10833,7 +10833,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -11836,7 +11836,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -12078,6 +12078,8 @@ MonoBehaviour:
   - {fileID: 2105000001}
   harvestToolCatalog: {fileID: 11400000, guid: 6a293e9677e1cb6459acc50ee4c65a11, type: 2}
   creatureColorFoodCatalog: {fileID: 0}
+  creatureTameFoodCatalog: {fileID: 11400000, guid: e65cbd7c6db9bc741b097f3b2360aaf7,
+    type: 2}
   worldGridSettings: {fileID: 11400000, guid: 4e2dd4f0c3851a146bd5ac93a22f5682, type: 2}
 --- !u!1 &245869871
 GameObject:
@@ -12607,7 +12609,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -13098,6 +13100,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260508867}
   m_CullTransparentMesh: 1
+--- !u!1 &261087460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 261087461}
+  - component: {fileID: 261087463}
+  - component: {fileID: 261087462}
+  m_Layer: 0
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &261087461
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261087460}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1860843070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &261087462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261087460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.7, g: 0.52, b: 1, a: 0.9}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3f24801b39b849c4da72ac2079974e7b, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &261087463
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261087460}
+  m_CullTransparentMesh: 1
 --- !u!1 &262991798
 GameObject:
   m_ObjectHideFlags: 0
@@ -13150,7 +13227,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -14147,7 +14224,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 2118933180}
+    m_Font: {fileID: 1649721580}
     m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
@@ -14168,6 +14245,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292442023}
   m_CullTransparentMesh: 1
+--- !u!1 &293724338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 293724339}
+  - component: {fileID: 293724340}
+  - component: {fileID: 293724341}
+  m_Layer: 0
+  m_Name: NameLabel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &293724339
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293724338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1781974049}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.45}
+  m_AnchorMax: {x: 0.62, y: 1}
+  m_AnchoredPosition: {x: 18, y: -1}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &293724340
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293724338}
+  m_CullTransparentMesh: 1
+--- !u!114 &293724341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293724338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.93, g: 0.89, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 1649721580}
+    m_FontSize: 13
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\uAE38\uB4E4\uC774\uB294 \uC911"
 --- !u!1 &294789834
 GameObject:
   m_ObjectHideFlags: 0
@@ -15201,7 +15357,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -15804,7 +15960,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -16487,7 +16643,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -21994,7 +22150,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 2118933180}
+    m_Font: {fileID: 1649721580}
     m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
@@ -22457,7 +22613,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -24883,7 +25039,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 2118933180}
+    m_Font: {fileID: 1649721580}
     m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
@@ -25128,7 +25284,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -29780,7 +29936,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -30013,7 +30169,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -30927,7 +31083,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -31398,7 +31554,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -34594,7 +34750,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -36234,6 +36390,7 @@ RectTransform:
   - {fileID: 1961954676}
   - {fileID: 347983298}
   - {fileID: 698523300}
+  - {fileID: 1781974049}
   m_Father: {fileID: 205720148}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -36326,6 +36483,13 @@ MonoBehaviour:
   hungerValue: {fileID: 1204018093}
   hydrationFill: {fileID: 1756549318}
   hydrationValue: {fileID: 504344953}
+  tamingRoot: {fileID: 1781974048}
+  tamingGroup: {fileID: 1781974050}
+  tamingNameLabel: {fileID: 293724341}
+  tamingValueLabel: {fileID: 1435900239}
+  tamingFill: {fileID: 261087461}
+  tamingHideDelaySeconds: 2.5
+  tamingFadeSpeed: 6
   warningThreshold: 0.25
   warningColor: {r: 1, g: 0.28, b: 0.18, a: 1}
   editorStyleVersion: 6
@@ -36493,6 +36657,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824950783}
   m_CullTransparentMesh: 1
+--- !u!21 &825886683
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Malgun Gothic
+  m_Shader: {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 1188509823}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &826890859
 GameObject:
   m_ObjectHideFlags: 0
@@ -38063,7 +38260,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -40342,7 +40539,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -42794,52 +42991,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956801775}
   m_CullTransparentMesh: 1
---- !u!28 &964585485
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Malgun Gothic
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 4
-  m_Width: 0
-  m_Height: 0
-  m_CompleteImageSize: 0
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 0
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 0
-  _typelessdata: 
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &964823921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43495,7 +43646,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -44081,7 +44232,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -45017,7 +45168,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -46379,7 +46530,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -46918,7 +47069,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 2118933180}
+    m_Font: {fileID: 1649721580}
     m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
@@ -47382,7 +47533,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -48661,7 +48812,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -49097,7 +49248,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -52316,6 +52467,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186911139}
   m_CullTransparentMesh: 1
+--- !u!28 &1188509823
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Malgun Gothic
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 4
+  m_Width: 0
+  m_Height: 0
+  m_CompleteImageSize: 0
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 0
+  _typelessdata: 
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &1190714417
 GameObject:
   m_ObjectHideFlags: 0
@@ -52859,7 +53056,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 2118933180}
+    m_Font: {fileID: 1649721580}
     m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
@@ -54478,39 +54675,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238071540}
   m_CullTransparentMesh: 1
---- !u!21 &1242012015
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Malgun Gothic
-  m_Shader: {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 964585485}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1245327370
 GameObject:
   m_ObjectHideFlags: 0
@@ -54577,7 +54741,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 2118933180}
+    m_Font: {fileID: 1649721580}
     m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
@@ -56014,7 +56178,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -56335,7 +56499,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -58626,7 +58790,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -59071,7 +59235,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -59997,7 +60161,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -61587,7 +61751,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -62434,6 +62598,85 @@ MonoBehaviour:
   m_EffectColor: {r: 0.82, g: 0.72, b: 1, a: 0.28}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 0
+--- !u!1 &1435900236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1435900237}
+  - component: {fileID: 1435900238}
+  - component: {fileID: 1435900239}
+  m_Layer: 0
+  m_Name: ValueLabel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1435900237
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435900236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1781974049}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.62, y: 0.45}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -16, y: -1}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1435900238
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435900236}
+  m_CullTransparentMesh: 1
+--- !u!114 &1435900239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435900236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.78, g: 0.68, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 1649721580}
+    m_FontSize: 13
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 5
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0% (0)
 --- !u!1 &1438214419
 GameObject:
   m_ObjectHideFlags: 0
@@ -62713,7 +62956,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -63311,7 +63554,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -67072,7 +67315,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 2118933180}
+    m_Font: {fileID: 1649721580}
     m_FontSize: 13
     m_FontStyle: 1
     m_BestFit: 0
@@ -67542,7 +67785,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -67761,7 +68004,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -69182,7 +69425,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -70098,7 +70341,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -70742,6 +70985,39 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1643228948}
   m_PrefabAsset: {fileID: 0}
+--- !u!128 &1649721580
+Font:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Malgun Gothic
+  serializedVersion: 5
+  m_LineSpacing: 42.5625
+  m_DefaultMaterial: {fileID: 825886683}
+  m_FontSize: 32
+  m_Texture: {fileID: 1188509823}
+  m_AsciiStartOffset: 0
+  m_Tracking: 1
+  m_CharacterSpacing: 0
+  m_CharacterPadding: 1
+  m_ConvertCase: -2
+  m_CharacterRects: []
+  m_KerningValues: []
+  m_PixelScale: 0.1
+  m_FontData: 
+  m_Ascent: 34.828125
+  m_Descent: 0
+  m_DefaultStyle: 0
+  m_FontNames:
+  - Malgun Gothic
+  - Apple SD Gothic Neo
+  - Noto Sans CJK KR
+  - Arial
+  m_FallbackFonts: []
+  m_FontRenderingMode: 0
+  m_UseLegacyBoundsCalculation: 0
+  m_ShouldRoundAdvanceValue: 1
 --- !u!1 &1650157002
 GameObject:
   m_ObjectHideFlags: 0
@@ -72344,7 +72620,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 2118933180}
+    m_Font: {fileID: 1649721580}
     m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
@@ -74455,7 +74731,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -77649,6 +77925,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775798678}
   m_CullTransparentMesh: 1
+--- !u!1 &1781974048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1781974049}
+  - component: {fileID: 1781974052}
+  - component: {fileID: 1781974051}
+  - component: {fileID: 1781974050}
+  m_Layer: 0
+  m_Name: TamingProgress
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1781974049
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781974048}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 293724339}
+  - {fileID: 1435900237}
+  - {fileID: 1860843070}
+  m_Father: {fileID: 821212477}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -10}
+  m_SizeDelta: {x: 420, y: 56}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1781974050
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781974048}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &1781974051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781974048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.178, g: 0.081, b: 0.459, a: 0.55}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3f24801b39b849c4da72ac2079974e7b, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1781974052
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781974048}
+  m_CullTransparentMesh: 1
 --- !u!1 &1783937249
 GameObject:
   m_ObjectHideFlags: 0
@@ -79203,7 +79570,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 2118933180}
+    m_Font: {fileID: 1649721580}
     m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
@@ -81115,6 +81482,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860827622}
   m_CullTransparentMesh: 1
+--- !u!1 &1860843069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1860843070}
+  - component: {fileID: 1860843072}
+  - component: {fileID: 1860843071}
+  m_Layer: 0
+  m_Name: Track
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1860843070
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860843069}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 261087461}
+  m_Father: {fileID: 1781974049}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 12}
+  m_SizeDelta: {x: -24, y: 8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1860843071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860843069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.15, g: 0.11, b: 0.23, a: 0.72}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3f24801b39b849c4da72ac2079974e7b, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1860843072
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860843069}
+  m_CullTransparentMesh: 1
 --- !u!1 &1861645257
 GameObject:
   m_ObjectHideFlags: 0
@@ -81692,7 +82135,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -82327,7 +82770,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -82727,7 +83170,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -83489,7 +83932,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -85200,7 +85643,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -85967,7 +86410,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -87825,7 +88268,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -89415,7 +89858,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -90580,7 +91023,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -91194,7 +91637,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -91598,7 +92041,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca4f3ee83c430374c9529cda7a3604e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_001_Scripts.UI.Component.SurvivalUIInteractableFX
+  m_EditorClassIdentifier: Assembly-CSharp::AstraNope.UI.Components.UIInteractableFX
   hoverScale: 1.025
   pressedScale: 0.97
   responseSpeed: 18
@@ -92411,39 +92854,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116328289}
   m_CullTransparentMesh: 1
---- !u!128 &2118933180
-Font:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Malgun Gothic
-  serializedVersion: 5
-  m_LineSpacing: 42.5625
-  m_DefaultMaterial: {fileID: 1242012015}
-  m_FontSize: 32
-  m_Texture: {fileID: 964585485}
-  m_AsciiStartOffset: 0
-  m_Tracking: 1
-  m_CharacterSpacing: 0
-  m_CharacterPadding: 1
-  m_ConvertCase: -2
-  m_CharacterRects: []
-  m_KerningValues: []
-  m_PixelScale: 0.1
-  m_FontData: 
-  m_Ascent: 34.828125
-  m_Descent: 0
-  m_DefaultStyle: 0
-  m_FontNames:
-  - Malgun Gothic
-  - Apple SD Gothic Neo
-  - Noto Sans CJK KR
-  - Arial
-  m_FallbackFonts: []
-  m_FontRenderingMode: 0
-  m_UseLegacyBoundsCalculation: 0
-  m_ShouldRoundAdvanceValue: 1
 --- !u!1 &2120820319
 GameObject:
   m_ObjectHideFlags: 0

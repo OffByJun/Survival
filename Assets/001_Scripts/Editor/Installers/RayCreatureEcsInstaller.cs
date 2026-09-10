@@ -89,7 +89,8 @@ namespace AstraNope.Editor
                 EditorSceneManager.RestoreSceneManagerSetup(previousSetup);
             }
 
-            EditorUtility.SetDirty(catalog);
+            CreatureSpeciesCatalog freshCatalog = AssetDatabase.LoadAssetAtPath<CreatureSpeciesCatalog>(CatalogPath);
+            if (freshCatalog != null) EditorUtility.SetDirty(freshCatalog);
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Debug.Log($"[Survival] Installed {rayPrefabs.Count} ray species into the WorldBuilder ECS creature pipeline.");
@@ -128,10 +129,25 @@ namespace AstraNope.Editor
                 CreatureSpeciesDefinition definition = new CreatureSpeciesDefinition();
                 definition.Configure(Humanize(modelName), nextId, model,
                     DefaultSpawnCenter(catalog.MutableSpecies.Count), DefaultSpeed(modelName), DefaultScale(modelName));
+                (float maxAffinity, float perFeed, int guaranteedAttempts) = DefaultTaming(modelName);
+                definition.ConfigureTaming(maxAffinity, perFeed, guaranteedAttempts);
                 catalog.MutableSpecies.Add(definition);
                 registered.Add(model);
                 usedIds.Add(nextId);
                 nextId++;
+            }
+
+            // Backfill species that predate the taming fields and still carry the shared default.
+            foreach (CreatureSpeciesDefinition existing in catalog.MutableSpecies)
+            {
+                if (existing == null || existing.Model == null) continue;
+                bool isUntouchedDefault = Mathf.Approximately(existing.MaximumAffinity, 100f) &&
+                                          Mathf.Approximately(existing.AffinityPerFeed, 25f) &&
+                                          existing.GuaranteedAfterAttempts == 4;
+                if (!isUntouchedDefault) continue;
+                (float maxAffinity, float perFeed, int guaranteedAttempts) =
+                    DefaultTaming(existing.Model.name);
+                existing.ConfigureTaming(maxAffinity, perFeed, guaranteedAttempts);
             }
 
             EditorUtility.SetDirty(catalog);
@@ -177,7 +193,7 @@ namespace AstraNope.Editor
                 Set(creature, "displayName", definition.DisplayName);
                 Set(creature, "sizeClass", (int)CreatureSizeClass.Medium);
                 Set(creature, "personality", (int)CreaturePersonality.Wary);
-                Set(creature, "interactions", (int)CreatureInteractionMask.Scan);
+                Set(creature, "interactions", (int)(CreatureInteractionMask.Scan | CreatureInteractionMask.Feed));
                 Set(creature, "randomSeed", (long)(uint)definition.PrefabId);
                 Set(creature, "cruiseSpeed", definition.CruiseSpeed);
                 Set(creature, "turnSpeedDegrees", definition.TurnSpeedDegrees);
@@ -189,6 +205,11 @@ namespace AstraNope.Editor
                 Set(creature, "leashToHomeRegion", true);
                 Set(creature, "regionMargin", 3f);
                 Set(creature, "despawnGraceSeconds", 12f);
+                Set(creature, "maximumAffinity", definition.MaximumAffinity);
+                Set(creature, "affinityPerFeed", definition.AffinityPerFeed);
+                Set(creature, "guaranteedAfterAttempts", definition.GuaranteedAfterAttempts);
+                Set(creature, "feedCooldownSeconds", definition.FeedCooldownSeconds);
+                Set(creature, "preferredFeedItemId", -1);
 
                 RayAIAuthoring ray = root.AddComponent<RayAIAuthoring>();
                 Set(ray, "maximumBankDegrees", definition.MaximumBankDegrees);
@@ -357,6 +378,15 @@ namespace AstraNope.Editor
 
         private static float DefaultScale(string modelName)
             => modelName.IndexOf("king", StringComparison.OrdinalIgnoreCase) >= 0 ? 1.25f : 1f;
+
+        private static (float maxAffinity, float perFeed, int guaranteedAttempts) DefaultTaming(string modelName)
+        {
+            if (modelName.IndexOf("king", StringComparison.OrdinalIgnoreCase) >= 0) return (150f, 15f, 6);
+            if (modelName.IndexOf("electric", StringComparison.OrdinalIgnoreCase) >= 0) return (110f, 15f, 5);
+            if (modelName.IndexOf("night", StringComparison.OrdinalIgnoreCase) >= 0) return (90f, 18f, 4);
+            if (modelName.IndexOf("coral", StringComparison.OrdinalIgnoreCase) >= 0) return (75f, 20f, 3);
+            return (60f, 20f, 3);
+        }
 
         private static string Humanize(string value)
             => string.Join(" ", value.Split(new[] { '_', '-', ' ' }, StringSplitOptions.RemoveEmptyEntries)

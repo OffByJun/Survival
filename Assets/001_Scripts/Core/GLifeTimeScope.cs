@@ -1,5 +1,5 @@
-using AstraNope.Gameplay.Player;
-using AstraNope.Gameplay.Input;
+using AstraNope.Mechanics.Player;
+using AstraNope.Mechanics.Input;
 using AstraNope.Core.World.Water;
 using AstraNope.Core.World.Water.Interfaces;
 using AstraNope.Data.Messages;
@@ -33,6 +33,7 @@ namespace AstraNope.Core
     {
         [SerializeField] private HarvestToolCatalog harvestToolCatalog;
         [SerializeField] private CreatureColorFoodCatalog creatureColorFoodCatalog;
+        [SerializeField] private CreatureTameFoodCatalog creatureTameFoodCatalog;
         [SerializeField] private WorldGridSettings worldGridSettings;
 
         protected override void Configure(IContainerBuilder builder)
@@ -131,6 +132,8 @@ namespace AstraNope.Core
             builder.RegisterComponentInHierarchy<WorkbenchPanel>();
             builder.RegisterComponentInHierarchy<SubmarineFabricatorPanel>();
             builder.RegisterComponentInHierarchy<BlueprintPanel>();
+            builder.RegisterComponentInHierarchy<Fabricator>();
+            builder.RegisterComponentInHierarchy<SubmarineFabricator>();
         }
 
         private void RegisterWorld(IContainerBuilder builder)
@@ -151,6 +154,9 @@ namespace AstraNope.Core
             builder.RegisterInstance(creatureColorFoodCatalog != null
                 ? creatureColorFoodCatalog
                 : ScriptableObject.CreateInstance<CreatureColorFoodCatalog>());
+            builder.RegisterInstance(creatureTameFoodCatalog != null
+                ? creatureTameFoodCatalog
+                : ScriptableObject.CreateInstance<CreatureTameFoodCatalog>());
             builder.Register<InventoryCreatureToolSelector>(Lifetime.Singleton).As<ICreatureToolSelector>();
             builder.Register<DotsCreatureInteractionService>(Lifetime.Singleton).As<ICreatureInteractionService>();
             builder.RegisterEntryPoint<CreaturePlayerFocusBridge>();

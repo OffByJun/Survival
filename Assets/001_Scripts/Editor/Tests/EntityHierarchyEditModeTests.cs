@@ -1,6 +1,6 @@
 using System.Linq;
 using System.Reflection;
-using AstraNope.Gameplay.Player;
+using AstraNope.Mechanics.Player;
 using AstraNope.Data.Entities;
 using AstraNope.Data.Items;
 using AstraNope.Data.Structures;

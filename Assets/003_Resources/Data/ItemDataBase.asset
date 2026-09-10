@@ -434,3 +434,61 @@ MonoBehaviour:
         icon: {fileID: 0}
         firstPersonPrefab: {fileID: 1510537095097373606, guid: 1757bf58dce1f374da807e7b0ad76ac2,
           type: 3}
+    - Key: 20
+      Value:
+        itemId: 20
+        itemName: Common Tame Bait
+        itemDesc: "\uBB3C\uACE0\uAE30\uB97C \uAE38\uB4E4\uC774\uB294 \uAE30\uBCF8
+          \uBBF8\uB07C. \uB0AE\uC740 \uB4F1\uAE09 \uBB3C\uACE0\uAE30\uC5D0\uAC8C
+          \uD6A8\uACFC\uC801\uC774\uB2E4."
+        ItemGrade: 0
+        itemType: 3
+        weight: 0.2
+        ItemAttributes:
+        - attrType: 0
+          modifiers: []
+        - attrType: 2
+          modifiers: []
+        - attrType: 4
+          modifiers: []
+        equipmentSlot: 0
+        icon: {fileID: 0}
+        firstPersonPrefab: {fileID: 0}
+    - Key: 21
+      Value:
+        itemId: 21
+        itemName: Rare Tame Lure
+        itemDesc: "\uC815\uC81C\uB41C \uAE38\uB4E4\uC774\uAE30 \uBA39\uC774. \uD76C\uADC0
+          \uB4F1\uAE09 \uBB3C\uACE0\uAE30\uC5D0\uAC8C \uD6A8\uACFC\uC801\uC774\uB2E4."
+        ItemGrade: 1
+        itemType: 3
+        weight: 0.2
+        ItemAttributes:
+        - attrType: 0
+          modifiers: []
+        - attrType: 2
+          modifiers: []
+        - attrType: 4
+          modifiers: []
+        equipmentSlot: 0
+        icon: {fileID: 0}
+        firstPersonPrefab: {fileID: 0}
+    - Key: 22
+      Value:
+        itemId: 22
+        itemName: Legendary Tame Feast
+        itemDesc: "\uCD5C\uC0C1\uAE09 \uAE38\uB4E4\uC774\uAE30 \uBA39\uC774. \uC804\uC124
+          \uB4F1\uAE09 \uBB3C\uACE0\uAE30\uC5D0\uAC8C \uD6A8\uACFC\uC801\uC774\uB2E4."
+        ItemGrade: 3
+        itemType: 3
+        weight: 0.2
+        ItemAttributes:
+        - attrType: 0
+          modifiers: []
+        - attrType: 2
+          modifiers: []
+        - attrType: 4
+          modifiers: []
+        equipmentSlot: 0
+        icon: {fileID: 0}
+        firstPersonPrefab: {fileID: 0}

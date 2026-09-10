@@ -71,7 +71,7 @@ MonoBehaviour:
   fallbackGrade: 0
   sizeClass: 1
   personality: 2
-  interactions: 2
+  interactions: 6
   randomSeed: 2103
   supportedPatterns: 0
   primaryColor: {r: 0.72, g: 0.74, b: 0.75, a: 1}
@@ -87,11 +87,11 @@ MonoBehaviour:
   leashToHomeRegion: 1
   regionMargin: 3
   despawnGraceSeconds: 12
-  guaranteedAfterAttempts: 4
+  guaranteedAfterAttempts: 6
   preferredFoodBonus: 0.2
   preferredFeedItemId: -1
-  maximumAffinity: 100
-  affinityPerFeed: 25
+  maximumAffinity: 150
+  affinityPerFeed: 15
   feedCooldownSeconds: 2
   fleeDistanceOverride: 8
   wildReaction: 0
